@@ -2,7 +2,7 @@ import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
-enum SystemIcons {
+enum PlatformIcons {
   add(
       cupertino: CupertinoIcons.add,
       material: Icons.add,
@@ -1493,7 +1493,7 @@ enum SystemIcons {
   wifi(
       material: Icons.wifi_outlined,
       cupertino: CupertinoIcons.wifi,
-      fluent: FluentIcons.wifi_4_24_regular),
+      fluent: FluentIcons.wifi_1_24_regular),
 
   rotateRightFilled(
       material: Icons.rotate_right,
@@ -1580,7 +1580,7 @@ enum SystemIcons {
       cupertino: CupertinoIcons.zoom_out,
       fluent: FluentIcons.zoom_out_24_regular);
 
-  const SystemIcons({
+  const PlatformIcons({
     required this.material,
     required this.cupertino,
     required this.fluent,

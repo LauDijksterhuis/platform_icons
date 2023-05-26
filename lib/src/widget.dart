@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/widgets.dart';
 import 'package:platform_icons/platform_icons.dart';
 
-class SystemIcon extends StatelessWidget {
-  final SystemIcons iconData;
+class PlatformIcon extends StatelessWidget {
+  final PlatformIcons iconData;
 
   final double? size;
   final double? fill;
@@ -16,7 +16,7 @@ class SystemIcon extends StatelessWidget {
   final String? semanticLabel;
   final TextDirection? textDirection;
 
-  const SystemIcon(this.iconData,
+  const PlatformIcon(this.iconData,
       {super.key,
       this.size,
       this.fill,
@@ -30,22 +30,32 @@ class SystemIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    IconData icon;
+
     if (kIsWeb) {
-      return Icon(iconData.material);
+      icon = iconData.material;
     } else {
       if (Platform.isIOS) {
-        return Icon(iconData.cupertino);
+        icon = iconData.cupertino;
       }
       if (Platform.isAndroid) {
-        return Icon(iconData.material);
+        icon = iconData.material;
       }
       if (Platform.isMacOS) {
-        return Icon(iconData.cupertino);
+        icon = iconData.cupertino;
       }
       if (Platform.isWindows) {
-        return Icon(iconData.fluent);
+        icon = iconData.fluent;
       }
+      icon = iconData.material;
     }
-    return Icon(iconData.material);
+
+    return Icon(icon,
+        size: size,
+        color: color,
+        semanticLabel: semanticLabel,
+        textDirection: textDirection,
+        shadows: shadows,
+        key: key);
   }
 }
