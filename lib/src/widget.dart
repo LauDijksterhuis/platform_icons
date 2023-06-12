@@ -35,19 +35,13 @@ class PlatformIcon extends StatelessWidget {
     if (kIsWeb) {
       icon = iconData.material;
     } else {
-      if (Platform.isIOS) {
-        icon = iconData.cupertino;
-      }
-      if (Platform.isAndroid) {
-        icon = iconData.material;
-      }
-      if (Platform.isMacOS) {
+      icon = iconData.material;
+      if (Platform.isIOS || Platform.isMacOS) {
         icon = iconData.cupertino;
       }
       if (Platform.isWindows) {
         icon = iconData.fluent;
       }
-      icon = iconData.material;
     }
 
     return Icon(icon,
