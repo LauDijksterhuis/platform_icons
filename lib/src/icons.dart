@@ -195,27 +195,27 @@ enum PlatformIcons {
       cupertino: CupertinoIcons.book_fill,
       fluent: FluentIcons.book_24_filled),
 
-  bookMark(
+  bookmark(
       material: Icons.bookmark_outline,
       cupertino: CupertinoIcons.bookmark,
       fluent: FluentIcons.bookmark_24_regular),
 
-  bookMarkFilled(
+  bookmarkFilled(
       material: Icons.bookmark,
       cupertino: CupertinoIcons.bookmark_fill,
       fluent: FluentIcons.bookmark_24_filled),
 
-  bookMarkAdd(
+  bookmarkAdd(
       material: Icons.bookmark_add_outlined,
       cupertino: CupertinoIcons.bookmark,
       fluent: FluentIcons.bookmark_add_24_regular),
 
-  bookMarkAddFilled(
+  bookmarkAddFilled(
       material: Icons.bookmark_add,
       cupertino: CupertinoIcons.bookmark_fill,
       fluent: FluentIcons.bookmark_add_24_filled),
 
-  bookMarkRemove(
+  bookmarkRemove(
       material: Icons.bookmark_remove_outlined,
       cupertino: CupertinoIcons.bookmark,
       fluent: FluentIcons.bookmark_off_24_regular),
