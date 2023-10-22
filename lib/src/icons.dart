@@ -1320,6 +1320,11 @@ enum PlatformIcons {
       cupertino: CupertinoIcons.rotate_right,
       fluent: FluentIcons.rotate_right_24_regular),
 
+  save(
+      material: Icons.save_outlined,
+      cupertino: CupertinoIcons.floppy_disk,
+      fluent: FluentIcons.save_24_regular),
+
   scissors(
       material: Icons.content_cut,
       cupertino: CupertinoIcons.scissors,
@@ -1359,6 +1364,11 @@ enum PlatformIcons {
       material: Icons.draw_outlined,
       cupertino: CupertinoIcons.signature,
       fluent: FluentIcons.signature_24_regular),
+
+  slider(
+      material: Icons.tune_outlined,
+      cupertino: CupertinoIcons.slider_horizontal_3,
+      fluent: Icons.tune_outlined),
 
   speaker0(
       material: Icons.volume_mute_outlined,
