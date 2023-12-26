@@ -1360,6 +1360,16 @@ enum PlatformIcons {
       cupertino: CupertinoIcons.shuffle,
       fluent: FluentIcons.arrow_shuffle_24_regular),
 
+  sidebarLeft(
+      material: CupertinoIcons.sidebar_left,
+      cupertino: CupertinoIcons.sidebar_left,
+      fluent: FluentIcons.panel_left_24_regular),
+
+  sidebarRight(
+      material: CupertinoIcons.sidebar_right,
+      cupertino: CupertinoIcons.sidebar_right,
+      fluent: FluentIcons.panel_right_24_regular),
+
   signature(
       material: Icons.draw_outlined,
       cupertino: CupertinoIcons.signature,
