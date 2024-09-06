@@ -1,6 +1,6 @@
 name: platform_icons
 description: Simplify icon usage in your flutter app with icons that adapt to the platform you're running on. Uses material icons on Android & web. Uses Cupertino icons on iOS & MacOS. Uses Fluent UI icons on Windows.
-version: 0.0.6
+version: 0.1.0
 homepage: https://github.com/simplewidgets/platform_icons
 
 environment:
@@ -12,7 +12,8 @@ dependencies:
     sdk: flutter
   fluentui_system_icons: ^1.1.223
   cupertino_icons: ^1.0.6
-
+  simplewidgets_platform_helper_packages: ^0.0.1
+ 
 dev_dependencies:
   flutter_test:
     sdk: flutter

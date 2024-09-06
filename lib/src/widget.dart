@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:platform_icons/platform_icons.dart';
 
 class PlatformIcon extends StatelessWidget {
+  final PlatformTarget? target;
+
   final PlatformIcons iconData;
 
   final double? size;
@@ -18,6 +20,7 @@ class PlatformIcon extends StatelessWidget {
 
   const PlatformIcon(this.iconData,
       {super.key,
+      this.target,
       this.size,
       this.fill,
       this.weight,
@@ -30,10 +33,37 @@ class PlatformIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (kIsWeb) {
+      return Icon(iconData.material,
+          size: size,
+          color: color,
+          semanticLabel: semanticLabel,
+          textDirection: textDirection,
+          shadows: shadows,
+          key: key);
+    }
+
     IconData icon;
 
-    if (kIsWeb) {
-      icon = iconData.material;
+    if (target != null) {
+      switch (target) {
+        case PlatformTarget.android:
+          icon = iconData.material;
+          break;
+        case PlatformTarget.ios:
+          icon = iconData.cupertino;
+          break;
+        case PlatformTarget.macos:
+          icon = iconData.cupertino;
+          break;
+
+        case PlatformTarget.windows:
+          icon = iconData.fluent;
+          break;
+
+        default:
+          icon = iconData.material;
+      }
     } else {
       icon = iconData.material;
       if (Platform.isIOS || Platform.isMacOS) {
